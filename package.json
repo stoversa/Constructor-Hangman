@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/stoversa/Constructor-Hangman/issues"
   },
-  "homepage": "https://github.com/stoversa/Constructor-Hangman#readme"
+  "homepage": "https://github.com/stoversa/Constructor-Hangman#readme",
+  "dependencies": {
+    "inquirer": "^5.1.0"
+  }
 }
