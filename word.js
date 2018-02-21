@@ -1,21 +1,27 @@
 var Letter = require("./letter");
 //Depends on the Letter constructor. This is used to create an object representing the current word the user is attempting to guess:
 function Word(currentWord){
-    this.word = currentWord.split("");
+    this.selection = currentWord;
     this.letters = []; //An array of new Letter objects representing the letters of the underlying word
-    this.addLetter = function () {
-        var array = this.letters;
-        this.word.forEach(function (v){
-            array.push(new Letter(v));
-        })
+    this.populateLetters = function(){
+        var array = this.selection.split("");
+        var letters = this.letters
+        array.forEach(function (v) {
+            letters.push(new Letter(v))
+        });
     }
     this.runString = function(){
         //A function that returns a string representing the word. This should call the function on each letter object (the first function defined in Letter.js) that displays the character or an underscore and concatenate those together.
-        this.letters.forEach(v => v.returnChar());
+        var progress = "";
+        var letters = this.letters
+        for (var i = 0; i < letters.length; i++){
+            progress += letters[i].returnChar();
+        }
+        return progress;
     };
     this.checkWord = function (character){
         //A function that takes a character as an argument and calls the guess function on each letter object(the second function defined in Letter.js)
-        this.letters.forEach(v => v.check());
+        this.letters.forEach(v => v.check(character));
     };
 }
 
