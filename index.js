@@ -1,5 +1,5 @@
 const inquirer = require('inquirer');
-var Word = require("./word");
+var Word = require("./assets/javascript/word");
 var wordChoices = ["brontosaurus", "echidna", "eagle", "dolphin", "cheetah", "rhinoceros", "panda", "orangutan"];
 var letterOptions = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var guessesSoFar = [];
