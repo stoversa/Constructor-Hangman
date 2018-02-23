@@ -64,7 +64,6 @@ function reset(){
     turn = 8;
     changeComputerChoice();
     showProgress();
-    askQuestion();
 }
 
 //recursive loop
